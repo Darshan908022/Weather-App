@@ -1,0 +1,82 @@
+.strip {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  backdrop-filter: blur(16px);
+}
+
+.label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.days {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  scrollbar-width: none;
+}
+
+.days::-webkit-scrollbar {
+  display: none;
+}
+
+.day {
+  flex: 1;
+  min-width: 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.03);
+  border-radius: var(--radius-sm);
+  padding: 12px 8px;
+  animation: fadeInUp 0.4s ease forwards;
+  opacity: 0;
+}
+
+.dayName {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+.desc {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.temps {
+  display: flex;
+  gap: 6px;
+  align-items: baseline;
+}
+
+.high {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.low {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}

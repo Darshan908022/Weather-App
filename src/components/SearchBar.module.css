@@ -1,0 +1,77 @@
+.form {
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  padding: 4px 4px 4px 16px;
+  gap: 8px;
+  transition: border-color 0.2s;
+}
+
+.wrapper:focus-within {
+  border-color: var(--border-active);
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.input {
+  flex: 1;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 14px;
+  padding: 8px 0;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent);
+  border: none;
+  border-radius: 50px;
+  width: 36px;
+  height: 36px;
+  color: #0a0f1e;
+  flex-shrink: 0;
+  transition: opacity 0.2s, transform 0.15s;
+}
+
+.button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.button:not(:disabled):hover {
+  transform: scale(1.05);
+}
+
+.button:not(:disabled):active {
+  transform: scale(0.95);
+}
+
+.spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(10, 15, 30, 0.3);
+  border-top-color: #0a0f1e;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
